@@ -1,0 +1,1 @@
+paplay ~/.alert-sound.ogg

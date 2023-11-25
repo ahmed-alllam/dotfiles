@@ -1,0 +1,6 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhistcnt =4
+let g:netrw_dirhist_4='/home/allam/.config/emacs/docs'
+let g:netrw_dirhist_3='/home/allam/.config/neofetch'
+let g:netrw_dirhist_2='/tmp/pulse-PKdhtXMmr18n'
+let g:netrw_dirhist_1='/home/allam/.config'

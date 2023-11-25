@@ -30,12 +30,17 @@ exec --no-startup-id dex --autostart --environment i3
 
 # xss-lock grabs a logind suspend inhibit lock and will use i3lock to lock the
 # screen before suspend. Use loginctl lock-session to lock your screen.
-exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
+exec_always --no-startup-id xset dpms 0 0 300 &
+exec --no-startup-id xss-lock --transfer-sleep-lock -- physlock
+
+
+exec_always --no-startup-id dunst -config ~/.config/dunst/dunstrc
 
 # NetworkManager is the most popular way to manage wireless networks on Linux,
 # and nm-applet is a desktop environment-independent system tray GUI for it.
 exec --no-startup-id nm-applet
 exec --no-startup-id unclutter -idle 1 -root
+
 
 
 bindsym XF86MonBrightnessUp exec --no-startup-id "brightnessctl set +5%"
@@ -47,6 +52,13 @@ bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT
 bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -10% && $refresh_i3status
 bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle && $refresh_i3status
 bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle && $refresh_i3status
+
+
+bindsym XF86AudioPlay exec playerctl play-pause
+bindsym XF86AudioPause exec playerctl play-pause
+bindsym XF86AudioNext exec playerctl next
+bindsym XF86AudioPrev exec playerctl previous
+
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
@@ -125,12 +137,12 @@ bindsym $mod+a focus parent
 
 
 # change icons
-set $ws1 "1" 
-set $ws2 "2"
-set $ws3 "3"
-set $ws4 "4"
-set $ws5 "5"
-set $ws6 "6"
+set $ws1 "1: 󱗃 Startups" 
+set $ws2 "2: 󰙔 Research"
+set $ws3 "3:  Self Studying"
+set $ws4 "4:  Coding"
+set $ws5 "5:  Other Work"
+set $ws6 "6: 󱉟 Uni Studies"
 set $ws7 "7"
 set $ws8 "8"
 set $ws9 "9"
@@ -162,6 +174,15 @@ bindsym $mod+Shift+7 move container to workspace number $ws7
 bindsym $mod+Shift+8 move container to workspace number $ws8
 bindsym $mod+Shift+9 move container to workspace number $ws9
 bindsym $mod+Shift+0 move container to workspace number $ws10
+
+
+
+
+
+
+
+
+
 
 # reload the configuration file
 bindsym $mod+Shift+c reload

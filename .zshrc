@@ -109,7 +109,7 @@ bindkey "^[[B" history-substring-search-down
 #
 cat .cache/wal/sequences
 
-alias vim="gvim -v"
+alias vim="nvim"
 
 
-
+export XSECURELOCK_NO_COMPOSITE=1
