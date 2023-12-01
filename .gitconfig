@@ -3,3 +3,5 @@
 	name = Ahmed Allam
 [credential]
 	helper = store
+[core]
+	editor = vim
