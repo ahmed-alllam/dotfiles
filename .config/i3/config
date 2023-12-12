@@ -31,8 +31,7 @@ exec --no-startup-id dex --autostart --environment i3
 # xss-lock grabs a logind suspend inhibit lock and will use i3lock to lock the
 # screen before suspend. Use loginctl lock-session to lock your screen.
 exec_always --no-startup-id xset dpms 0 0 300 &
-exec --no-startup-id xss-lock --transfer-sleep-lock -- physlock
-
+exec_always --no-startup-id xss-lock --transfer-sleep-lock -- physlock -d
 
 exec_always --no-startup-id dunst -config ~/.config/dunst/dunstrc
 
@@ -240,8 +239,8 @@ exec_always --no-startup-id picom -f
 #############################
 
 # Set inner/outer gaps
-gaps inner 8
-gaps outer 0
+gaps inner 15
+gaps outer 5
 
 # Additionally, you can issue commands with the following syntax. This is useful to bind keys to changing the gap size.
 # gaps inner|outer current|all set|plus|minus <px>
@@ -314,10 +313,10 @@ smart_gaps on
 smart_gaps inverse_outer
 
 # Activate smart borders (always)
-#smart_borders on
+smart_borders on
 
 # Activate smart borders (only when there are effectively no gaps)
-#smart_borders no_gaps
+smart_borders no_gaps
 
 # Hide edge borders only if there is one window with no gaps
 hide_edge_borders smart_no_gaps

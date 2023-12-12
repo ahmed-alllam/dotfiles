@@ -110,6 +110,12 @@ bindkey "^[[B" history-substring-search-down
 cat .cache/wal/sequences
 
 alias vim="nvim"
-
+alias lock="physlock -d"
+alias trm="mv --target-directory=/home/allam/.local/share/Trash/files/"
 
 export XSECURELOCK_NO_COMPOSITE=1
+
+
+doom () {
+	emacs "$@" & disown
+}
