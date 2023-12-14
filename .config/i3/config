@@ -301,15 +301,16 @@ mode "$mode_gaps_outer" {
 
 exec_always --no-startup-id bash $HOME/.config/polybar/launch.sh
 
+exec_always --no-startup-id sleep 2 && ./xborder/xborders --border-radius 35
 
 bindsym Print exec --no-startup-id flameshot gui
 
-border_radius 20
+border_radius 30
 
 # Only enable gaps on a workspace when there is at least one container
 smart_gaps on
 
-# Only enable outer gaps when there is exactly one container
+# Only enable outer gaps when there isexactly one container
 smart_gaps inverse_outer
 
 # Activate smart borders (always)
@@ -320,3 +321,7 @@ smart_borders no_gaps
 
 # Hide edge borders only if there is one window with no gaps
 hide_edge_borders smart_no_gaps
+
+#for_window [class="^.*"] border pixel 35
+
+
