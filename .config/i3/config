@@ -301,7 +301,7 @@ mode "$mode_gaps_outer" {
 
 exec_always --no-startup-id bash $HOME/.config/polybar/launch.sh
 
-exec_always --no-startup-id sleep 2 && ./xborder/xborders --border-radius 35
+exec_always --no-startup-id sleep 2 && ./.xborder/xborders --border-radius 35
 
 bindsym Print exec --no-startup-id flameshot gui
 
