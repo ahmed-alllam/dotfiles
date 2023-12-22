@@ -137,7 +137,7 @@ bindsym $mod+a focus parent
 # Change layout of keyboard
 bindsym $alt+Shift+2 exec "setxkbmap -layout ara"
 
-bindsym $alt+Shift+1 exec "setxkbmap -layout us"
+bindsym $alt+Shift+1 exec "setxkbmap -layout us -variant dvp -option compose:102 -option numpad:shift3 -option kpdl:semi -option keypad:atm -option caps:shift"
 
 # focus the child container
 #bindsym $mod+d focus child
