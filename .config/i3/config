@@ -33,7 +33,8 @@ exec --no-startup-id dex --autostart --environment i3
 # xss-lock grabs a logind suspend inhibit lock and will use i3lock to lock the
 # screen before suspend. Use loginctl lock-session to lock your screen.
 exec_always --no-startup-id xset dpms 0 0 300 &
-exec_always --no-startup-id xss-lock --transfer-sleep-lock -- physlock -d
+exec_always --no-startup-id ~/.lock_script.sh &
+
 
 exec_always --no-startup-id dunst -config ~/.config/dunst/dunstrc
 
