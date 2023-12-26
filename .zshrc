@@ -72,6 +72,25 @@ HIST_STAMPS="mm/dd/yyyy"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(git zsh-syntax-highlighting zsh-autosuggestions dotenv zsh-history-substring-search)
 
+
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/home/allam/miniconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/home/allam/miniconda3/etc/profile.d/conda.sh" ]; then
+        . "/home/allam/miniconda3/etc/profile.d/conda.sh"
+    else
+        export PATH="/home/allam/miniconda3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<
+
+
 source $ZSH/oh-my-zsh.sh
 
 
@@ -110,12 +129,12 @@ bindkey "^[[B" history-substring-search-down
 cat .cache/wal/sequences
 
 alias vim="nvim"
-alias lock="physlock -d"
+alias lock="loginctl lock-sessions"
 alias trm="mv --target-directory=/home/allam/.local/share/Trash/files/"
 
 export XSECURELOCK_NO_COMPOSITE=1
 
 
 doom () {
-	emacs "$@" & disown
+	emacsclient -c "$@" & disown
 }
