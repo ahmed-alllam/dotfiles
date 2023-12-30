@@ -96,3 +96,7 @@
               ("TAB" . 'copilot-accept-completion)
               ("C-TAB" . 'copilot-accept-completion-by-word)
               ("C-<tab>" . 'copilot-accept-completion-by-word)))
+
+
+(setq explicit-shell-file-name "/usr/bin/zsh")
+(setq shell-file-name "zsh")

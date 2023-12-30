@@ -36,6 +36,9 @@ exec_always --no-startup-id xset dpms 0 0 300 &
 exec_always --no-startup-id ~/.lock_script.sh &
 
 
+exec_always --no-startup-id bash ~/.config/polybar/launch.sh
+exec_always --no-startup-id bash ~/.config/picom/launch.sh
+
 exec_always --no-startup-id dunst -config ~/.config/dunst/dunstrc
 exec_always --no-startup-id emacs --daemon
 
@@ -240,7 +243,6 @@ exec_always --no-startup-id feh --bg-fill Pictures/Wal/.wallpaper
 exec_always --no-startup-id wal -i Pictures/Wal/.wallpaper
 
 
-exec_always --no-startup-id picom -f
 
 
 #############################
@@ -307,10 +309,9 @@ mode "$mode_gaps_outer" {
 
 
 
-
-exec_always --no-startup-id bash $HOME/.config/polybar/launch.sh
-
 exec_always --no-startup-id sleep 2 && ./.xborder/xborders --border-radius 35
+
+
 
 bindsym Print exec --no-startup-id flameshot gui
 

@@ -126,7 +126,7 @@ bindkey "^[[B" history-substring-search-down
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 #
-cat .cache/wal/sequences
+cat ~/.cache/wal/sequences
 
 alias vim="nvim"
 alias lock="loginctl lock-sessions"
@@ -138,3 +138,4 @@ export XSECURELOCK_NO_COMPOSITE=1
 doom () {
 	emacsclient -c "$@" & disown
 }
+
