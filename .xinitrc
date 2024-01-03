@@ -38,12 +38,12 @@ if [ -d /etc/X11/xinit/xinitrc.d ] ; then
  unset f
 fi
 
-pipewire &
-pipewire-pulse &
-dbus-run-session dwm 2> ~/.dwm.log
-
 export GTK_THEME=Midnight
 
 exec i3
 
 ./.lock_script.sh &
+
+dbus-run-session dwm 2> ~/.dwm.log
+pulseaudio --start &
+

@@ -615,8 +615,8 @@ colors:
 shell:
   program: /bin/zsh
 
-program: 
-  wal -i Pictures/Wal/.wallpaper
+    #program: 
+    #wal -i Pictures/Wal/.wallpaper
 #  args:
 #    - --login
 # Startup directory
