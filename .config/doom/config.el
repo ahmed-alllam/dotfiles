@@ -100,3 +100,10 @@
 
 (setq explicit-shell-file-name "/usr/bin/zsh")
 (setq shell-file-name "zsh")
+
+(remove-hook 'after-change-major-mode-hook #'doom-highlight-non-default-indentation-h)
+
+(use-package! whitespace
+  :config
+  (setq
+    global-whitespace-mode nil))

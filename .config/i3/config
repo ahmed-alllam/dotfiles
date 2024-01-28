@@ -147,6 +147,8 @@ bindsym $alt+Shift+1 exec --no-startup-id "setxkbmap -layout us -variant colemak
 # We use variables to avoid repeating the names in multiple places.
 
 
+bindsym $mod+Tab workspace back_and_forth
+
 # change icons
 set $ws1 "1: 󱗃 Startups" 
 set $ws2 "2: 󰙔 Research"
@@ -311,7 +313,7 @@ exec_always --no-startup-id sleep 2 && ./.xborder/xborders --border-radius 35
 
 bindsym Print exec --no-startup-id flameshot gui
 
-bindsym XF86Calculator  exec --no-startup-id ~/Scripts/registerBanner.sh
+#bindsym XF86Calculator  exec --no-startup-id ~/Scripts/registerBanner.sh
 
 border_radius 30
 
