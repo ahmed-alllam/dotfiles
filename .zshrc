@@ -135,3 +135,6 @@ doom () {
 	emacsclient -c "$@" & disown
 }
 
+
+alias less='less -Q'
+alias man='man -P "less -Q"'

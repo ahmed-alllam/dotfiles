@@ -9,3 +9,5 @@ alias ls='ls --color=auto'
 alias grep='grep --color=auto'
 PS1='[\u@\h \W]\$ '
 
+alias less='less -Q'
+alias man='man -P "less -Q"'
