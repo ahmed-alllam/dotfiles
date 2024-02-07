@@ -82,6 +82,10 @@ bindsym $mod+d exec --no-startup-id emacsclient -c
 bindsym $mod+Shift+q kill
 bindsym $mod+q exec --no-startup-id ~/.lock_script.sh true &
 
+bindsym $mod+$alt+q exec --no-startup-id xtrlock &
+
+
+
 bindsym $mod+Shift+minus move scratchpad
 bindsym $mod+minus scratchpad show
 

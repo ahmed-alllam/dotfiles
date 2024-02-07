@@ -138,3 +138,6 @@ doom () {
 
 alias less='less -Q'
 alias man='man -P "less -Q"'
+
+export EDITOR=vim
+
