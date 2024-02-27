@@ -107,3 +107,9 @@
   :config
   (setq
     global-whitespace-mode nil))
+
+
+(require 'rust-mode)
+
+(map! :nv "j" #'evil-next-visual-line)
+(map! :nv "k" #'evil-previous-visual-line)

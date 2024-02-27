@@ -11,3 +11,4 @@ PS1='[\u@\h \W]\$ '
 
 alias less='less -Q'
 alias man='man -P "less -Q"'
+. "$HOME/.cargo/env"
